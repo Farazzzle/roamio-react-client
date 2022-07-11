@@ -1,5 +1,7 @@
+import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import { Activities } from "../pages/Activties";
+import { UserAvatar } from "./UserAvatar";
+
 import "../styles/Navigation.css";
 
 export const NavigationPanel = () => {
@@ -10,16 +12,21 @@ export const NavigationPanel = () => {
 					<NavLink to="/" className="nav-logo">
 						Roamio
 					</NavLink>
-					<li className="nav-item">
-						<NavLink to="/activities" className="nav-links">
-							Activities
-						</NavLink>
-					</li>
-					<li className="nav-item">
-						<NavLink to="/questions" className="nav-links">
-							Questions
-						</NavLink>
-					</li>
+					<div className="nav-menu">
+						<li className="nav-item">
+							<NavLink to="/activities" className="nav-links">
+								Activities
+							</NavLink>
+						</li>
+						<li className="nav-item">
+							<NavLink to="/questions" className="nav-links">
+								Questions
+							</NavLink>
+						</li>
+						<li>
+							<UserAvatar />
+						</li>
+					</div>
 				</div>
 			</nav>
 		</div>
