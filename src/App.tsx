@@ -1,22 +1,24 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { NavigationPanel } from "./components/Navigation";
-import { Homepage } from "./pages/HomePage";
-import { Activities } from "./pages/Activties";
-import { Questions } from "./pages/Questions";
+import Navbar from "./components/navbar/Navbar";
+import { HomePage } from "./pages/HomePage";
+import { RecommendationsPage } from "./pages/RecommendationsPage";
+import { QuestionsPage } from "./pages/QuestionsPage";
 import "./App.css";
 
 function App() {
 	return (
 		<div className="App">
-			<Router>
-				<NavigationPanel />
-				<Routes>
-					<Route path="/" element={<Homepage />} />
-					<Route path="/activities" element={<Activities />} />
-					<Route path="/questions" element={<Questions />} />
-				</Routes>
-			</Router>
+			<div className="blue_background">
+				<Router>
+					<Navbar />
+					<Routes>
+						<Route path="/" element={<HomePage />} />
+						<Route path="/recommendations" element={<RecommendationsPage />} />
+						<Route path="/questions" element={<QuestionsPage />} />
+					</Routes>
+				</Router>
+			</div>
 		</div>
 	);
 }
