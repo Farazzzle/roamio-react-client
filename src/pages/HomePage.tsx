@@ -1,5 +1,5 @@
-import Header from "../containers/header/Header";
-import WhatGPT3 from "../containers/whatGPT3/WhatGPT3";
+import Header from "../containers/Header";
+import WhatGPT3 from "../containers/WhatGPT3";
 
 export function HomePage() {
 	return (
