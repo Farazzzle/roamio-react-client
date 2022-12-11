@@ -1,6 +1,6 @@
 export interface Region {
   id: number;
-  destination_url_name: string; // Not sure if this is needed
+  destination_url_name: string; 
   default_currency_code: string;
   parent_id: string;
   timezone: string;
@@ -12,3 +12,5 @@ export interface Region {
   longitude: number;
   parent_id: number;
 }
+
+//Initial
