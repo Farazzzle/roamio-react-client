@@ -1,13 +1,12 @@
-import Header from "../containers/Header";
-import WhatGPT3 from "../containers/WhatGPT3";
+import Header from '../containers/Header'
+import React from 'react'
 
 export function HomePage() {
-	return (
-		<div>
-			<div className="blue_background">
-				<Header />
-			</div>
-			<WhatGPT3 />
-		</div>
-	);
+  return (
+    <div>
+      <div className="blue_background">
+        <Header />
+      </div>
+    </div>
+  )
 }
