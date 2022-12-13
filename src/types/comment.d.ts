@@ -1,6 +1,6 @@
 export interface Comment {
   id: number;
-  product_id: number;
-  user_id: number;
+  productId: number;
+  userId: number;
   comment: string;
 }
