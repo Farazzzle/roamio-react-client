@@ -1,12 +1,7 @@
 
+import {Action} from '../actions/activityActions'
 import {Activity} from "../../types/activity"
 
-
-
-type Action = {
-  type: string,
-  payload?: Array<Activity>
-}
 
 const activityReducer = (state: Array<Activity> = initialState, action: Action) => {
   switch(action.type){

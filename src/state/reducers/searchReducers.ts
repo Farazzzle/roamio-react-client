@@ -1,5 +1,6 @@
-
+import {Action} from '../actions/searchActions'
 import {ActivityRequest} from "../../types/activity"
+
 const initialState = {
   destSelected: 1000,
   searchQuery: "", //search title + description + provider <- not sure if this is a concatenated string
@@ -13,20 +14,6 @@ const initialState = {
   count: 20,
 }
 
-interface SetSearchAction {
-  type: "SET_SEARCH"
-  payload: ActivityRequest
-}
-interface UpdateSearchAction {
-  type: "UPDATE_SEARCH"
-  payload: ActivityRequest
-}
-interface DeleteSearchAction {
-  type: "DELETE_SEARCH"
-  payload: ActivityRequest
-}
-
-type Action = SetSearchAction | UpdateSearchAction | DeleteSearchAction
 
 const searchReducer = (state: ActivityRequest = initialState, action: Action) => {
   switch(action.type){
