@@ -22,7 +22,7 @@ const searchReducer = (state: ActivityRequest = initialState, action: Action) =>
     case "UPDATE_SEARCH":
       return action.payload
     case "DELETE_SEARCH":
-      return null
+      return initialState
     default:
       return initialState
   }
