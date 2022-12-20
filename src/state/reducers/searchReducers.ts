@@ -1,21 +1,8 @@
-import {Action} from '../actions/searchActions'
+import {ActionSearch} from '../actions/searchActions'
 import {ActivityRequest} from "../../types/activity"
 
-const initialState = {
-  destSelected: 1000,
-  searchQuery: "", //search title + description + provider <- not sure if this is a concatenated string
-  tagIds: ["10203","2034","2023"],// Not sure if its an object or array
-  highestRating: 5,
-  lowestRating: 0,
-  highestPrice: 500,
-  lowestPrice: 0,
-  sortBy: "RATING",
-  startIndex: 1,
-  count: 20,
-}
 
-
-const searchReducer = (state: ActivityRequest = initialState, action: Action) => {
+const searchReducer = (state: ActivityRequest = initialState, action: ActionSearch) => {
   switch(action.type){
     case "SET_SEARCH":
       return action.payload
@@ -31,3 +18,15 @@ const searchReducer = (state: ActivityRequest = initialState, action: Action) =>
 
 export default searchReducer
 
+const initialState = {
+  destSelected: 1000,
+  searchQuery: "", //search title + description + provider <- not sure if this is a concatenated string
+  tagIds: ["10203","2034","2023"],// Not sure if its an object or array
+  highestRating: 5,
+  lowestRating: 0,
+  highestPrice: 500,
+  lowestPrice: 0,
+  sortBy: "RATING",
+  startIndex: 1,
+  count: 20,
+}

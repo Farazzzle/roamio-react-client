@@ -11,7 +11,6 @@ interface UpdateSearchAction {
 }
 interface DeleteSearchAction {
   type: ActionType.DELETE_SEARCH
-  payload: ActivityRequest
 }
 
-export type Action = SetSearchAction | UpdateSearchAction | DeleteSearchAction
+export type ActionSearch = SetSearchAction | UpdateSearchAction | DeleteSearchAction
